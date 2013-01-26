@@ -1,0 +1,40 @@
+{
+  "instrumentation": "node-jscoverage",
+  "sloc": 0,
+  "hits": 0,
+  "misses": 0,
+  "coverage": 0,
+  "files": [
+    {
+      "filename": "kordon.js",
+      "coverage": null,
+      "hits": 0,
+      "misses": 0,
+      "sloc": 0,
+      "source": {}
+    }
+  ],
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2013-01-26T01:24:18.391Z",
+    "end": "2013-01-26T01:24:18.392Z",
+    "duration": 1
+  },
+  "tests": [
+    {
+      "title": "w/o port",
+      "fullTitle": "open with path w/o port"
+    }
+  ],
+  "failures": [
+    {
+      "title": "w/o port",
+      "fullTitle": "open with path w/o port"
+    }
+  ],
+  "passes": []
+}
