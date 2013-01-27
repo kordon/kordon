@@ -14,5 +14,12 @@
     "mocha": "1.8.x",
     "sgen": "0.1.x",
     "chai": "1.4.x"
+  },
+  "dependencies": {
+    "portfinder": "0.2.x",
+    "request": "2.12.x",
+    "moment": "1.7.x",
+    "mkdirp": "0.3.x",
+    "async": "0.1.x"
   }
 }
