@@ -11,15 +11,19 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "mocha": "1.8.x",
+    "mocha": "1.9.x",
     "sgen": "0.1.x",
-    "chai": "1.4.x"
+    "chai": "1.5.x"
   },
   "dependencies": {
+    "gossip": "git+ssh://git@github.com:kordon/gossip.git",
     "portfinder": "0.2.x",
-    "request": "2.12.x",
-    "moment": "1.7.x",
+    "request": "2.20.x",
+    "turnout": "0.0.x",
+    "moment": "2.0.x",
     "mkdirp": "0.3.x",
-    "async": "0.1.x"
+    "async": "0.2.x",
+    "blage": "0.0.x",
+    "clone": "0.1.x"
   }
 }

@@ -4,7 +4,7 @@
 
 ## test
 
-[![](https://drone.io/github.com/kordon/kordon/status.png)](https://drone.io/github.com/kordon/kordon/latest)
+[![](https://drone.io/github.com/kordon/kordon/status.png)](https://drone.io/github.com/kordon/kordon/latest) [![Dependency Status](https://gemnasium.com/kordon/kordon.png)](https://gemnasium.com/kordon/kordon)
 
  * [Log](kordon/blob/master/test/results/test.md)
  * [HTML Coverage](http://f.cl.ly/items/0s3w0d1R1H0w243H3h3d/coverage.html)
