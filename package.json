@@ -1,29 +1,33 @@
 {
   "name": "kordon",
-  "version": "0.0.0",
-  "main": "src/kordon.js",
-  "scripts": {
-    "test": "make test"
+  "version": "0.0.1",
+  "description": "",
+  "keywords": [],
+  "homepage": "https://github.com/kordon/kordon",
+  "bugs": {
+    "url": "http://github.com/kordon/kordon/issues",
+    "email": "mail@sergioramos.me"
+  },
+  "license": "MIT",
+  "author": "Sérgio Ramos <mail@sergioramos.me> (http://sergioramos.me/)",
+  "main": "src/kordon",
+  "directories": {
+    "lib": "src"
   },
   "repository": {
     "type": "git",
     "url": "git://github.com/kordon/kordon.git"
   },
-  "license": "MIT",
-  "devDependencies": {
-    "mocha": "1.9.x",
-    "sgen": "0.1.x",
-    "chai": "1.5.x"
+  "scripts": {
+    "test": "make test test-coveralls"
   },
-  "dependencies": {
-    "gossip": "git+ssh://git@github.com:kordon/gossip.git",
-    "portfinder": "0.2.x",
-    "request": "2.20.x",
-    "turnout": "0.0.x",
-    "moment": "2.0.x",
-    "mkdirp": "0.3.x",
-    "async": "0.2.x",
-    "blage": "0.0.x",
-    "clone": "0.1.x"
+  "devDependencies": {
+    "mocha-lcov-reporter": "0.0.x",
+    "jscoverage": "0.3.x",
+    "coveralls": "2.3.x",
+    "mocha": "1.13.x"
+  },
+  "engines": {
+    "node": ">=0.8"
   }
 }

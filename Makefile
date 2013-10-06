@@ -1,25 +1,23 @@
-MOCHA=node_modules/.bin/mocha test/specs -u tdd -t 4000
+REPORTER = spec
+UI = qunit
+TESTS = test/specs
 
 test:
-	$(MOCHA) -R spec
+	@NODE_ENV=test ./node_modules/.bin/mocha $(TESTS) -u $(UI) -R $(REPORTER) -t 4000 -c -G -b
 
-md:
-	$(MOCHA) -R Markdown > test/results/test.md
+lib-cov:
+	./node_modules/jscoverage/bin/jscoverage src lib-cov
 
-html:
-	$(MOCHA) -R HTML > test/results/test.html
+test-cov:	lib-cov
+	@KORDON_COV=1 $(MAKE) test REPORTER=html-cov > coverage.html
+	rm -rf lib-cov
 
-cov:
-	rm -rf src-cov
-	jscoverage src src-cov
+lcov: lib-cov
+	@KORDON_COV=1 $(MAKE) test REPORTER=mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js
 
-html-cov:
-	make cov
-	@KORDON_COV=1 $(MOCHA) -R html-cov > test/results/coverage.html
+test-coveralls:	lib-cov
+	echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
+	@KORDON_COV=1 $(MAKE) test REPORTER=mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js
+	rm -rf lib-cov
 
-json-cov:
-	make cov
-	@KORDON_COV=1 $(MOCHA) -R json-cov > test/results/coverage.json
-
-
-.PHONY: test html-cov json-cov md html
+.PHONY: test
