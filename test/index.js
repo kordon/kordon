@@ -3,6 +3,6 @@ var kordon = process.env.KORDON_COVERAGE ? require('../lib-cov/kordon.js') : req
 
 suite('test')
 
-test('nothing', function (callback) {
+test('nothing', function () {
   assert(kordon())
 })

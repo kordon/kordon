@@ -1,6 +1,6 @@
 REPORTER = spec
 UI = qunit
-TESTS = test/specs
+TESTS = test
 
 test:
 	@NODE_ENV=test ./node_modules/.bin/mocha $(TESTS) -u $(UI) -R $(REPORTER) -t 4000 -c -G -b
