@@ -12,9 +12,6 @@ test-cov:	lib-cov
 	@KORDON_COV=1 $(MAKE) test REPORTER=html-cov > coverage.html
 	rm -rf lib-cov
 
-lcov: lib-cov
-	@KORDON_COV=1 $(MAKE) test REPORTER=mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js
-
 test-coveralls:	lib-cov
 	echo TRAVIS_JOB_ID $(TRAVIS_JOB_ID)
 	@KORDON_COV=1 $(MAKE) test REPORTER=mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js
